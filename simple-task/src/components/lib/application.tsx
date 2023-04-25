@@ -1,7 +1,7 @@
-import CreateTask from './create-task';
-import TaskList from './task-list';
+// import CreateTask from '../create/create-task';
+import { CreateTask, TaskList } from '../index';
 
-const Application = () => {
+export const Application = () => {
   return (
     <main className="application">
       <div className="side-panel">
@@ -12,5 +12,3 @@ const Application = () => {
     </main>
   );
 };
-
-export default Application;

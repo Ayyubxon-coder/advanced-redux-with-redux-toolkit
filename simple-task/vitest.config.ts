@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
 
-export default defineConfig({
+export defineConfig({
   test: {
     globals: true,
   },

@@ -4,7 +4,7 @@ type UserEditProps = {
   user: User;
 };
 
-const UserEdit = ({ user }: UserEditProps) => {
+export const UserEdit = ({ user }: UserEditProps) => {
   const id = (p: keyof User) => `edit-user-${user.id}-${p}`;
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -39,5 +39,3 @@ const UserEdit = ({ user }: UserEditProps) => {
     </div>
   );
 };
-
-export default UserEdit;

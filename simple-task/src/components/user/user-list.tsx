@@ -1,7 +1,7 @@
 import CreateUser from './create-user';
 import Task from './user';
 
-const UserList = () => {
+export const UserList = () => {
   const users: User[] = [];
 
   return (
@@ -13,5 +13,3 @@ const UserList = () => {
     </section>
   );
 };
-
-export default UserList;

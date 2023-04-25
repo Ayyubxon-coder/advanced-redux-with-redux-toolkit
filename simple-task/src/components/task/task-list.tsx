@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import ApplicationContext from '../context';
-import Task from './task';
+import { ApplicationContext } from '../../context';
+import { Task } from 'vitest';
 
-const TaskList = () => {
+export const TaskList = () => {
   const { tasks } = useContext(ApplicationContext);
 
   return (
@@ -11,5 +11,3 @@ const TaskList = () => {
     </section>
   );
 };
-
-export default TaskList;

@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, useId } from 'react';
 
-const UserSelect = (props: ComponentPropsWithoutRef<'select'>) => {
+export const UserSelect = (props: ComponentPropsWithoutRef<'select'>) => {
   const id = useId();
   const users: User[] = [];
 
@@ -20,5 +20,3 @@ const UserSelect = (props: ComponentPropsWithoutRef<'select'>) => {
     </div>
   );
 };
-
-export default UserSelect;

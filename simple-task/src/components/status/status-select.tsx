@@ -1,7 +1,7 @@
 import { ComponentPropsWithoutRef, useId } from 'react';
-import { statuses } from '../lib/statuses';
+import { statuses } from '../../lib/statuses';
 
-const StatusSelect = (props: ComponentPropsWithoutRef<'select'>) => {
+export const StatusSelect = (props: ComponentPropsWithoutRef<'select'>) => {
   const id = useId();
 
   return (
@@ -20,5 +20,3 @@ const StatusSelect = (props: ComponentPropsWithoutRef<'select'>) => {
     </div>
   );
 };
-
-export default StatusSelect;

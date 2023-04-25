@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import ApplicationContext from '../context';
+import ApplicationContext from '../../context';
 
 type TaskProps = {
   task: Task;
@@ -31,4 +31,4 @@ const Task = ({ task }: TaskProps) => {
   );
 };
 
-export default Task;
+export Task;

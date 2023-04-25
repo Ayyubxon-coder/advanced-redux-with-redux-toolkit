@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const CreateTask = () => {
+export const CreateTask = () => {
   const [newTaskTitle, setnewTaskTitle] = useState('');
 
   return (
@@ -25,5 +25,3 @@ const CreateTask = () => {
     </form>
   );
 };
-
-export default CreateTask;

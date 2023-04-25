@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const CreateUser = () => {
+export const CreateUser = () => {
   const [realName, setRealName] = useState('');
   const [alterEgo, setAlterEgo] = useState('');
 
@@ -38,5 +38,3 @@ const CreateUser = () => {
     </form>
   );
 };
-
-export default CreateUser;

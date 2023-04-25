@@ -1,13 +1,12 @@
 import { memo, useState } from 'react';
-import UserEdit from './user-edit';
-
+import { UserEdit } from '../';
 type UserProps = {
   user: User;
 };
 
 const toggle = (b: boolean): boolean => !b;
 
-const User = ({ user }: UserProps) => {
+export const User = memo(({ user }: UserProps) => {
   const [editing, setEditing] = useState(false);
   const removeUser = ({ id }: { id: string }) => {
     console.log(`One day, this will remove a user with the ID of ${id}.`);
@@ -34,6 +33,4 @@ const User = ({ user }: UserProps) => {
       {editing && <UserEdit user={user} />}
     </article>
   );
-};
-
-export default memo(User);
+});
