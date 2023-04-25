@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { ApplicationContext } from '../../context';
-type TaskProps = {
-  task: any;
-};
+// type TaskProps = {
+//   task: any;
+// };
 
 export const Task = ({ task }: any) => {
   const { columns, users } = useContext(ApplicationContext);
