@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Application from './components/lib/application';
-
+import { Application } from './components';
 import { makeServer } from './api';
 
-import ApplicationContext from './context';
+import { ApplicationContext } from './context';
 import data from './api/data.json';
 import './index.css';
 

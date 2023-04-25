@@ -1,8 +1,6 @@
-import CreateUser from './create-user';
-import Task from './user';
-
+import { Task, CreateUser } from '../../components';
 export const UserList = () => {
-  const users: User[] = [];
+  const users: any[] = [];
 
   return (
     <section className="user-list">

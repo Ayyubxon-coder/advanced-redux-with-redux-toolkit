@@ -1,5 +1,4 @@
-// import CreateTask from '../create/create-task';
-import { CreateTask, TaskList } from '../index';
+import { CreateTask, TaskList } from '../../components';
 
 export const Application = () => {
   return (

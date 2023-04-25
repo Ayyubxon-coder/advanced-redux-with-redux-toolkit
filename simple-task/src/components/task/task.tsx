@@ -1,11 +1,10 @@
 import { useContext } from 'react';
-import ApplicationContext from '../../context';
-
+import { ApplicationContext } from '../../context';
 type TaskProps = {
-  task: Task;
+  task: any;
 };
 
-const Task = ({ task }: TaskProps) => {
+export const Task = ({ task }: any) => {
   const { columns, users } = useContext(ApplicationContext);
 
   const status = columns.find((column) => column.id === task.column)?.title;
@@ -30,5 +29,3 @@ const Task = ({ task }: TaskProps) => {
     </article>
   );
 };
-
-export Task;

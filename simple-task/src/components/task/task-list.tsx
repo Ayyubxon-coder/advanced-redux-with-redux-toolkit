@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ApplicationContext } from '../../context';
-import { Task } from 'vitest';
+import { Task } from '../../components';
 
 export const TaskList = () => {
   const { tasks } = useContext(ApplicationContext);
