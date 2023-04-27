@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { tasksReducer } from './features/tasks-slice';
+import { tasksReducer, usersReducer } from './features';
 
 const store = configureStore({
   reducer: {
     tasks: tasksReducer,
+    users: usersReducer,
   },
 });
 
