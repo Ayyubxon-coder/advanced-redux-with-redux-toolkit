@@ -21,7 +21,7 @@ const usersSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {
-    addUser: (state, action: PayloadAction<User>) => {
+    addUser: (state, action) => {
       const user = createUser(action.payload);
       state.entities.unshift(user);
     },

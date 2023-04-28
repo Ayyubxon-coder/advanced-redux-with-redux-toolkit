@@ -9,17 +9,16 @@ import { useAppDispatch } from '../../hooks';
 
 export const Task = ({ task }: any) => {
   const { columns, users } = useContext(ApplicationContext);
-  console.log(columns, users, 'columns, users');
 
   const dispatch = useAppDispatch();
 
-  const status = columns.find((column) => column.id === task.column)?.title;
-  const user = users.find((user) => user.id === task.user);
+  const status = columns.find((column) => column?.id === task?.column)?.title;
+  const user = users.find((user) => user?.id === task?.user);
 
   return (
     <article className="task">
       <header className="task-header">
-        <h2 className="task-title">{task.title}</h2>
+        <h2 className="task-title">{task?.title}</h2>
         <button
           className="destructive small"
           onClick={() => {

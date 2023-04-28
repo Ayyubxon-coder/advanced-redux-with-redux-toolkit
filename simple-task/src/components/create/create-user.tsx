@@ -1,14 +1,24 @@
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { addUser } from '../../features';
+import { useAppDispatch } from '../../hooks';
 
 export const CreateUser = () => {
-  const [realName, setRealName] = useState('');
-  const [alterEgo, setAlterEgo] = useState('');
+  const [user, setUser] = useState({ realName: '', alterEgo: '' });
+  const dispatch = useAppDispatch();
 
+  const handleUser = (e: ChangeEvent<HTMLInputElement>): void => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  
+  
+  
   return (
     <form
       className="create-user"
-      onSubmit={(e) => {
+      onSubmit={(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        dispatch(addUser(user));
       }}
     >
       <label htmlFor="new-user-real-name">
@@ -16,10 +26,11 @@ export const CreateUser = () => {
         <input
           id="new-user-real-name"
           type="text"
-          value={realName}
+          value={user.realName}
           placeholder="Real Name"
           required
-          onChange={(e) => setRealName(e.target.value)}
+          name="realName"
+          onChange={handleUser}
         />
       </label>
       <label htmlFor="new-user-alter-ego">
@@ -27,10 +38,11 @@ export const CreateUser = () => {
         <input
           id="new-user-alter-ego"
           type="text"
-          value={alterEgo}
+          value={user.alterEgo}
           placeholder="Alter Ego"
           required
-          onChange={(e) => setAlterEgo(e.target.value)}
+          name="alterEgo"
+          onChange={handleUser}
         />
       </label>
 

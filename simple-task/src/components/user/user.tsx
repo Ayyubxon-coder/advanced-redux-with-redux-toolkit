@@ -7,8 +7,9 @@ type UserProps = {
 const toggle = (b: boolean): boolean => !b;
 
 export const User = memo(({ user }: UserProps) => {
+  console.log(user);
   const [editing, setEditing] = useState(false);
-  const removeUser = ({ id }: { id: string }) => {
+  const removeUser = ({ id }: { id?: string }) => {
     console.log(`One day, this will remove a user with the ID of ${id}.`);
   };
 

@@ -8,10 +8,10 @@ type Task = {
 };
 
 type User = {
-  id: string;
+  id?: string;
   realName: string;
   alterEgo: string;
-  tasks: Task['id'][];
+  tasks?: Task['id'][];
 };
 
 type StatusColumn = {

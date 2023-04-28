@@ -5,7 +5,7 @@ export const UserList = () => {
   return (
     <section className="user-list">
       <CreateUser />
-      {users.map((user: any) => (
+      {users.map((user) => (
         <Task key={user.id} user={user} />
       ))}
     </section>

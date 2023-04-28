@@ -2,7 +2,6 @@ import { Task } from '../../components';
 import { useAppSelector } from '../../hooks';
 
 export const TaskList = () => {
-  // const { tasks } = useContext(ApplicationContext);
   const tasks = useAppSelector((state) => state.tasks.entities);
 
   return (

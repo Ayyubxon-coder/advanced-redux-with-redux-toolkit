@@ -1,11 +1,11 @@
-import { CreateTask, TaskList } from '../../components';
+import { CreateTask, TaskList, UserList } from '../../components';
 
 export const Application = () => {
   return (
     <main className="application">
       <div className="side-panel">
         <CreateTask />
-        {/* <UserList /> */}
+        <UserList />
       </div>
       <TaskList />
     </main>
