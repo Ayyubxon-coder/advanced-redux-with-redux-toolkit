@@ -8,7 +8,7 @@ type UsersState = {
 };
 
 const initialState: UsersState = {
-  entities: [],
+  entities: data.users,
 };
 
 type DraftUser = RequireOnly<User, 'realName' | 'alterEgo'>;
