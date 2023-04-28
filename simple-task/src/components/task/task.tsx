@@ -3,11 +3,11 @@ import { ApplicationContext } from '../../context';
 import { removeTask } from '../../features/tasks-slice';
 import { useAppDispatch } from '../../hooks';
 
-// type TaskProps = {
-//   task: Task;
-// };
+type TaskProps = {
+  task: Task;
+};
 
-export const Task = ({ task }: any) => {
+export const Task = ({ task }: TaskProps) => {
   const { columns, users } = useContext(ApplicationContext);
 
   const dispatch = useAppDispatch();

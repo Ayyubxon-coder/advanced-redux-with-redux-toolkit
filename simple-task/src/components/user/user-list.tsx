@@ -1,4 +1,4 @@
-import { Task, CreateUser } from '../../components';
+import { User, CreateUser } from '../../components';
 import { useAppSelector } from '../../hooks';
 export const UserList = () => {
   const users = useAppSelector((state) => state.users.entities);
@@ -6,7 +6,7 @@ export const UserList = () => {
     <section className="user-list">
       <CreateUser />
       {users.map((user) => (
-        <Task key={user.id} user={user} />
+        <User key={user.id} user={user} />
       ))}
     </section>
   );
