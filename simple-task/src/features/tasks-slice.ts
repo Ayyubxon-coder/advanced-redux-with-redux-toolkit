@@ -4,10 +4,11 @@ import {
   nanoid,
   PayloadAction,
 } from '@reduxjs/toolkit';
-import data from '../api/data.json';
+// import data from '../api/data.json';
 import { removeUser } from './users-slice';
 export type TaskState = {
   entities: Task[];
+  loading?: boolean;
 };
 type DraftTask = RequireOnly<Task, 'title'>;
 
@@ -17,6 +18,7 @@ export const createTask = (draftTask: DraftTask): Task => {
 
 const initialState: TaskState = {
   entities: [],
+  loading: false,
 };
 
 export const fetchTasks = createAsyncThunk(
@@ -52,7 +54,12 @@ const tasksSlice = createSlice({
       }
     });
 
+    builder.addCase(fetchTasks.pending, (state) => {
+      state.loading = true;
+    });
+
     builder.addCase(fetchTasks.fulfilled, (state, action) => {
+      state.loading = false;
       state.entities = action.payload;
     });
   },
