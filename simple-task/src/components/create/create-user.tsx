@@ -10,9 +10,6 @@ export const CreateUser = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  
-  
-  
   return (
     <form
       className="create-user"
